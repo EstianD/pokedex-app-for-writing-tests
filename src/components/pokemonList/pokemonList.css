@@ -1,0 +1,22 @@
+.pokemon-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.pokemon-container {
+  width: 33%;
+  border: 1px solid black;
+}
+
+.pokemon-list-img {
+  width: 200px;
+}
+
+.pagination-container-right {
+  margin: auto;
+}
+
+.pagination-container-left {
+  margin: auto;
+}

@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+// Components
+import PokemonList from "./components/pokemonList/PokemonList";
+import Pokemon from "./components/pokemon/Pokemon";
+
+// Pokemon url - ALL = https://pokeapi.co/api/v2/pokemon/?offset=0&limit=150
+// Pokemon sprite = https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/<pokemon-id>.png
+// Pokemon desc = https://pokeapi.co/api/v2/pokemon-species/<id> -> ["flavor_text_entries"][0]["flavor_text"]
+// Add search function for pokemon, add all pokemon in array and search that array
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Route exact path="/" render={() => <PokemonList />} />
+        <Route exact path="/pokemon/:id" render={() => <Pokemon />} />
+      </div>
+    </Router>
   );
 }
 
