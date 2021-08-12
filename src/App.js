@@ -16,6 +16,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <h3>PokeDex</h3>
         <Route exact path="/" render={() => <PokemonList />} />
         <Route exact path="/pokemon/:id" render={() => <Pokemon />} />
       </div>

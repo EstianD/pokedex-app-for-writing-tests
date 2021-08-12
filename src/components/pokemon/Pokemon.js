@@ -62,7 +62,7 @@ function Pokemon() {
                 {pokemonDetails.name} #{id}
               </h3>
               <img
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${pokemonId}.png`}
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`}
                 alt={pokemonId}
                 className="pokemon-image"
                 height="300"
@@ -79,7 +79,7 @@ function Pokemon() {
               {pokemonId > 1 && (
                 <button onClick={loadPreviousPokemon}>Previous</button>
               )}
-              {pokemonId < 150 && (
+              {pokemonId < 1000 && (
                 <button onClick={loadNextPokemon}>Next</button>
               )}
             </div>
